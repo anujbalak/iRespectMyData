@@ -8,47 +8,69 @@
         * {
             padding: 0;
             margin: 0;
-            list-style: none;
+            max-width: 90vw;
         }
 
         body {
             font-size: 1.1rem;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: monospace, mangal, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             line-height: 1.5;
-            display: flex;
-            gap: 20px;
-            flex-direction: column;
-            margin-left: 10%;
-            margin-right: 10%;
+            display: grid;
+            grid-template: 80px 1fr / minmax(10px, 1fr) 1fr minmax(10px , 1fr);
         }
         header {
-            
+            font-size: rem;
+            align-self: center;
+            grid-column: 2;
+    
         }
         a {
             color: black;
+            opacity: 75%;
             font-style: italic;
+            font-size: 1rem;
         }
         .content {
+            grid-area: 2 / 2;
             display: flex;
             flex-direction: column;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 1.4em;
+        }
+        
+
+        li {
+            margin-right: 10px;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            list-style: none;
+
+        }
+
+        ul {
+            display: grid;
+            gap: 1em;
         }
     </style>
 </head>
 <body>
-    <header class="title"><h1>iRespectMyData</h1></header>
+    <header class="title"><h2>iRespectMyData</h2></header>
     <main class="content">
         <div class="hindi">
-            नमस्कार! 
+            <div class="greet">नमस्ते! </div>
+            <div class="main-msg">हाल ही में, मैंने देखा कि Meta ने अपने ऐप WhatsApp पर अपना नया spyware प्रस्तुत किया है, जो कि करोड़ों लोगों के लिए प्रमुख communication ऐप है। हमने पहले भी WhatsApp पर यूजर्स के डेटा और privacy को गलत तरीके से इस्तेमाल करने के alligation देखे हैं। अब, इस नए टूल के साथ, मैं युवाओं और उन लोगों पर इसके प्रभाव के बारे में अधिक चिंतित हूं जो ज्यादा techy नहीं हैं और जो अकेलेपन से उलझे हुए है। अगर मैं इसका use करना चाहता हूं, तो मेरे पास इसे बंद या चालू करने का विकल्प होना चाहिए। उन्हें हमसे इन नए टूल्स के लिए पूछना चाहिए, खासकर AI के लिए, मजेदार बात यह है कि हम इसके खिलाफ कुछ नहीं कर सकते। <br> <br>
+                मुझे जो एकमात्र विकल्प मिला, वह है उनकी services से हटकर दूसरे विकल्पों का use करना, और मुझे जो सबसे अच्छा लगा वह है Signal या Telegram। Telegram पहले से ही कई भारतीयों के बीच famous है, और दूसरा Signal है, जिसे WhatsApp के एक पूर्व developer ने बनाया है। यह Open Source और free है। यह अपनी privacy policy और users की डेटा security के लिए जाना जाता है। Signal का use करना आसान है और इसका UI simple है; हाल ही में, मुझे WhatsApp का UI ज्यादा comple लगा। इसलिए अब समय आ गया है कि आप अपने डेटा का सम्मान करें।
+            </div>
         </div>
+        <hr>
         <div class="english">
             <div class="greet">Hello fellas!</div>
             <div class="main-msg">
-                So recently, I noticed that Meta has introduced his latest spyware on their app Whatsapp, which is the primary communication app for crores of people. We have already seen many agreements on WhatsApp for its users data and privacy. Now, with this new tool, I am more concerned with the impact of this on youth and those who are not so techy and who are suffering from loneliness. And I don't like that circular gradient icon on my home screen of the app; if I want to use it, then I should have an option to turn it off or on. They should ask us for these new tools, especially for AIs, why they are forcing us to use their bots so we can addict/waste our time/lose our data? And the funny is that we can't do anything against it; we can just shout and use their app. <br>
-                The only option that I found is to move on from their services and use other alternatives, and the best I found is Signal or Telegram. Telegram is already popular among many Indians, and another one is Signal, developed by a former developer of WhatsApp. It's open source and free. It's known for its privacy policy and user data protection. Signal is easy to use and has simple UI; recently, I found WhatsApp's UI more complex. So now it's time to respect your data.
+                So recently, I noticed that Meta has introduced his latest spyware on their app Whatsapp, which is the primary communication app for crores of people. We have already seen many agreements on WhatsApp for its users data and privacy. Now, with this new tool, I am more concerned with the impact of this on youth and those who are not so techy and who are suffering from loneliness. And I don't like that circular gradient icon on my home screen of the app; if I want to use it, then I should have an option to turn it off or on. They should ask us for these new tools, especially for AIs, why they are forcing us to use their bots so we can addict/waste our time/lose our data? And the funny is that we can't do anything against it; we can just shout and use their app.
+                <br> <br> The only option that I found is to move on from their services and use other alternatives, and the best I found is Signal or Telegram. Telegram is already popular among many Indians, and another one is Signal, developed by a former developer of WhatsApp. It's open source and free. It's known for its privacy policy and user data protection. Signal is easy to use and has simple UI; recently, I found WhatsApp's UI more complex. So now it's time to respect your data.
             </div> 
         </div>
+        <hr>
         <div class="signal">
                 <p>Download Signal:</p>
                 <a href="https://signal.org/install">https://signal.org/install</a>
@@ -79,13 +101,18 @@
         </div>
 
         <div class="telegram">
-            <p>Why I don't suggesting Telegram:</p>
+            <p>Why I'm not suggesting Telegram:</p>
             <ul>
                 <li><a href="https://www.forbes.com/sites/zakdoffman/2024/02/02/apple-iphone-google-pixel-and-samsung-galaxy-telegram-app-warning/">https://www.forbes.com/sites/zakdoffman/2024/02/02/apple-iphone-google-pixel-and-samsung-galaxy-telegram-app-warning/</a></li>
                 <li><a href="https://old.reddit.com/r/PrivacyGuides/comments/wi3ln6/complete_noob_is_telegram_the_best_in_terms_of/ij9f4l8/">https://old.reddit.com/r/PrivacyGuides/comments/wi3ln6/complete_noob_is_telegram_the_best_in_terms_of/ij9f4l8/</a></li>
                 <li><a href="https://teleteg.com/blogs/telegram-scam-fraud-report">https://teleteg.com/blogs/telegram-scam-fraud-report</a></li>
             </ul>
         </div>
+        <hr>
+        <p>
+            Share this page to your family and friends. <br>
+            And remember nothing is secure on internet.
+        </p>
     </main>
 </body>
 </html>
